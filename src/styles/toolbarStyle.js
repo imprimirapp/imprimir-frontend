@@ -23,7 +23,8 @@ const toolbarStyle = theme => ({
         fontWeight: 'bold',
         fontSize: 16,
         letterSpacing: '2px',
-        textTransform: 'capitalize'
+        textTransform: 'capitalize',
+        textDecoration: 'none'
     },
     typographyLogin:{
         fontFamily: 'Montserrat',
@@ -31,7 +32,8 @@ const toolbarStyle = theme => ({
         fontSize: 16,
         letterSpacing: '2px',
         color: '#fff',
-        textTransform: 'capitalize'
+        textTransform: 'capitalize',
+        textDecoration: 'none'
     }
 });
 

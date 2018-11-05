@@ -5,12 +5,14 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './styles/mainTheme'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import * as serviceWorker from './serviceWorker';
-import App from './components/App';
 import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import rootSaga from './sagas/index';
 import rootReducer from './reducers';
+import App from './components/App';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -29,7 +31,9 @@ ReactDOM.render(
         <Provider store={store}>
           <BrowserRouter>
             <Switch>
-              <Route exact path="/" component={App} />       
+              <Route exact path="/" component={App} /> 
+              <Route exact path="/login" component={Login} /> 
+              <Route exact path="/signup" component={Signup} />         
             </Switch>
           </BrowserRouter>
         </Provider>

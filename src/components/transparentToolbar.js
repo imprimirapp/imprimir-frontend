@@ -6,7 +6,7 @@ import toolbarStyle from '../styles/toolbarStyle'
 import withStyles from '@material-ui/core/styles/withStyles';
 import logo from '../assets/images/logo-web.png';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 class TransparentToolbar extends Component{
 
@@ -32,14 +32,10 @@ class TransparentToolbar extends Component{
                     alignItems="center"
                     >
                         <Button color="white" className={classes.buttonLogin}>
-                        <Typography variant="body2" className={classes.typographyLogin}>
-                            Iniciar Sesión
-                        </Typography>
+                        <Link to="/login"  className={classes.typographyLogin}>Iniciar Sesión</Link>
                         </Button> 
                         <Button variant="contained" className={classes.buttonSignup}>
-                        <Typography variant="body2" className={classes.typography}>
-                            Registrarse
-                        </Typography>
+                        <Link to="/signup"  className={classes.typography}>Registrarse</Link>
                         </Button> 
                     </Grid>
                 </Toolbar>
